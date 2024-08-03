@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block mainblock %}
+    <div class="card-header">
+        <img src="{{ url_for('static', filename='img/pokedex_logo.png')}}" width="40%" height="30%" alt="pokedex logo" />
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <label for="" class="search_label">Search by name</label>
+            <input type="text" class="search_input" placeholder="">
+            <button class="r1" type="button" id="search">Search</button>
+
+            <!-- Output space -->
+            <div class="output_space" id="outputspace">
+            </div>
+            <!-- End of output space -->
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img id="modal-image"/>
+                    <p id="modal-name">Name: </p>
+                    <p id="modal-type-one">Type 1: </p>
+                    <p id="modal-type-two">Type 2: </p>
+                    <p id="modal-weakness">Weak against: </p>
+                    <p id="modal-strengths">Strong against: </p>
+                    <p id="modal-immunity">Immune against: </p>
+                    <a id="modal-wiki-link"></a>
+                    <button id="modal-add">&#43;</button>
+                    <button id="modal-remove">&times;</button>
+                </div>
+                <!-- End of Modal content -->
+            </div>
+            <!-- End of Modal -->
+
+            <script src="{{ url_for('static', filename='js/pokedata.js')}}"></script>
+        </div>
+
+
+    </div>
+
+
+
+{% endblock %}
+
+{% block selectionblock %}
+    <ul class="selected-pokemon-box">
+        <li class="select-box">
+            <img id="box-0" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+        </li>
+
+        <li class="select-box">
+            <img id="box-1" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+        </li>
+
+        <li class="select-box">
+            <img id="box-2" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+        </li>
+        
+        <li class="select-box">
+            <img id="box-3" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+        </li>
+
+        <li class="select-box" >
+            <img id="box-4" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+        </li>
+    </ul>
+{% endblock %}
