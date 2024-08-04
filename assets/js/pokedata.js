@@ -150,7 +150,7 @@ function search(){
         data:{name: name},
     
         error: function() {
-          alert('Error');
+          alert('Error! Refresh the page!');
         },
 
         success: function(data, status, xhr) {

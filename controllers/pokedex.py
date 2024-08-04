@@ -7,7 +7,7 @@ import json
 
 pokedex = Blueprint('pokedex', __name__)
 
-@pokedex.route('/pokedex')
+@pokedex.route('/')
 def poke():
     exist = POKEMON.check_exist()
 

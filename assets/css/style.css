@@ -70,8 +70,8 @@ body {
 }
 
 .pokeImage:hover {
-    width: 81px;
-    height: 90px;
+    width: 76px;
+    height: 80px;
     outline: 1px black;
     box-shadow: 0 0 5px #000000;
     background-color: #464646;
